@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--从深蓝色到淡蓝色-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_btn_unchecked2" android:state_pressed="true"/>
+    <item android:drawable="@drawable/bg_corners5" android:state_pressed="false"/>
+</selector>

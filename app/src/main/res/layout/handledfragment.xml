@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskRadioGroup"
+        android:layout_marginTop="@dimen/value_5dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+</LinearLayout>

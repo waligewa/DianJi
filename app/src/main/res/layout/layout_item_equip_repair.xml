@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/value_5dp">
+
+    <TextView
+        android:id="@+id/tvNumber"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:text="姓名:123"/>
+
+    <TextView
+        android:id="@+id/tvEquipCode"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:text="设备编号:123"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:text="名称:123"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:text="时间:123"/>
+
+    <TextView
+        android:id="@+id/tvEquipTask"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:text="巡检任务:123"/>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        style="@style/item_tv"
+        android:layout_marginTop="@dimen/value_1dp"
+        android:layout_marginBottom="@dimen/value_1dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:text="故障描述:123"
+        android:singleLine="true"
+        android:maxEms="7"
+        android:ellipsize="end"  />
+
+</LinearLayout>

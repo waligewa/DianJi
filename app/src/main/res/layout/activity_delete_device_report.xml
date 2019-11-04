@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DeleteDeviceReportActivity">
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/value_10dp"
+        android:background="@drawable/shape_task_bg"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/unhandle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:text="未处理"
+            android:textColor="@color/selector_radio_text_color"
+            android:textSize="17sp"/>
+
+        <RadioButton
+            android:id="@+id/handle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/value_30dp"
+            android:gravity="center"
+            android:background="@null"
+            android:button="@null"
+            android:text="已处理"
+            android:textColor="@color/selector_radio_text_color"
+            android:textSize="17sp"/>
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/radiogroup"/>
+
+</RelativeLayout>

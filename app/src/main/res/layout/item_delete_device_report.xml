@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/value_10dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!--<com.example.shenzhen.widget.viewdrag.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        &lt;!&ndash;<LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/delete_button"
+                android:layout_width="50dp"
+                android:layout_height="175dp"
+                android:background="#ff0000"
+                android:clickable="true">
+
+                <View
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/trash"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>&ndash;&gt;
+
+    </com.example.shenzhen.widget.viewdrag.SwipeLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="设备名称："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="设备编号："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/device_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="设备地址："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/device_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="提报时间："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/report_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="反馈人："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/feedback_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="故障现象："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/fault_phenomenon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/value_10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/value_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:text="派工情况："
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dispatch_situation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="bbbb"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc" />
+
+</LinearLayout>

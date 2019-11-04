@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context=".activity.InstallInformationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备编号："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/device_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入设备编号"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="所在地区："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/located_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入所在地区"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="工程地点："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/engineer_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入工程地点"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户地址："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/user_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:paddingRight="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入用户地址"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户名称："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入用户名称"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="站点名称："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/site_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入站点名称"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备类型："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/device_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入设备类型"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="到达日期："
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/arrival_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="120dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:padding="@dimen/value_5dp"
+                    android:text="请选择日期"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="机器安装人员："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/machine_installer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入机器安装人员"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="机器安装日期："
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/machine_install_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="120dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:padding="@dimen/value_5dp"
+                    android:text="请选择日期"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="电气安装人员："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/electrical_installer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入电气安装人员"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="电气安装日期："
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/electrical_install_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="120dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:padding="@dimen/value_5dp"
+                    android:text="请选择日期"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备调试人员："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/equipment_debugger"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入设备调试人员"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备调试日期："
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/equipment_debug_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="120dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:padding="@dimen/value_5dp"
+                    android:text="请选择日期"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备生产厂商："
+                    android:textColor="#000" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="120dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:popupBackground="#979797"
+                    android:dropDownVerticalOffset="45dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="左侧可以点击"
+                    android:textColor="#f00"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="安装调试结论："
+                    android:textColor="#000"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/installation_debug_conclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="left|top"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:hint="请输入安装调试结论"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="安装调试反馈："
+                    android:textColor="#000"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/installation_debug_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="left|top"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:hint="请输入安装调试反馈"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="反馈措施："
+                    android:textColor="#000"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:id="@+id/feedback_measure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="left|top"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:hint="请输入反馈措施"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/value_10dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selecter_btn"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#ffffff"
+                android:textColorHint="#bbffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

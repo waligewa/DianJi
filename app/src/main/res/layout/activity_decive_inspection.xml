@@ -1,0 +1,2088 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context=".activity.DeviceInspectionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <!--顾客名称-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="顾客名称："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_GKMC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入顾客名称"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--设备编号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备编号："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_SBBH"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入设备编号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999"/>
+
+                <LinearLayout
+                    android:id="@+id/scan_scan"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_frame2"
+                    android:layout_marginRight="@dimen/value_5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:src="@mipmap/scan" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--设备型号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备型号："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_SBXH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入设备型号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--巡检员-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="巡检人员："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_XJRY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入巡检人员"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--巡检日期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="巡检日期："
+                    android:textColor="@color/color_333333" />
+
+                <TextView
+                    android:id="@+id/tv_device_XJRQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="200dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:hint="请输入巡检日期"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+            <!--输入电源1和2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/background_f5f5f5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="输入电源1："
+                        android:textColor="@color/color_333333" />
+
+                    <EditText
+                        android:id="@+id/tv_device_SRDY1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/shape_frame"
+                        android:inputType="date"
+                        android:gravity="center_vertical"
+                        android:hint="请输入电源"
+                        android:minWidth="120dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/color_999999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="V"
+                        android:textColor="@color/color_999999" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/background_f5f5f5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="输入电源2："
+                        android:textColor="@color/color_333333" />
+
+                    <EditText
+                        android:id="@+id/tv_device_SRDY2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/shape_frame"
+                        android:gravity="center_vertical"
+                        android:inputType="date"
+                        android:hint="请输入电源"
+                        android:minWidth="120dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/color_999999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="V"
+                        android:textColor="@color/color_999999" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--前级开关压线情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="前级开关压线情况："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="紧固"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--电机线压线情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="电机线压线情况："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="紧固"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--环境情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="环境情况："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_HJQK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="良好"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--监控方式-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="监控方式："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_JKFS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入监控方式"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--监控是否连接正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="监控是否连接正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--接触器是否灵活复位-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="接触器是否灵活复位："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="灵活"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--控制柜内螺丝松动情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="控制柜内螺丝松动情况："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="无松动"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--微机控制系统接线是否良好-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="微机控制系统接线是否良好："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--主线路触点压线情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="主线路触点压线情况："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="良好"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--水泵型号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="水泵型号："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_pump_SBXH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="请输入水泵型号"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--水泵运行情况-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="水泵运行情况："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_SBYX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="正常"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--电机额定电流1和2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/background_f5f5f5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="电机额定电流1："
+                        android:textColor="@color/color_333333" />
+
+                    <EditText
+                        android:id="@+id/tv_device_DJDL1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_frame"
+                        android:gravity="center_vertical"
+                        android:inputType="date"
+                        android:hint="请输入额定电流"
+                        android:minWidth="120dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/color_999999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="A"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_999999" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="2dp"
+                    android:background="@color/background_f5f5f5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="电机额定电流2："
+                        android:textColor="@color/color_333333" />
+
+                    <EditText
+                        android:id="@+id/tv_device_DJDL2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_frame"
+                        android:gravity="center_vertical"
+                        android:inputType="date"
+                        android:text="  /"
+                        android:minWidth="120dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/color_999999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="A"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_999999" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--热继电器动作值1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:text="热继电器动作值1："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE11"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="@dimen/value_5_dp"
+                    android:background="@drawable/shape_frame"
+                    android:inputType="date"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE21"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="@dimen/value_5_dp"
+                    android:background="@drawable/shape_frame"
+                    android:inputType="date"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE31"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="@dimen/value_5_dp"
+                    android:background="@drawable/shape_frame"
+                    android:inputType="date"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE41"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="@dimen/value_5_dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--热继电器动作值2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:text="热继电器动作值2："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="5dp"
+                    android:background="@drawable/shape_frame"
+                    android:inputType="date"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE22"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="5dp"
+                    android:background="@drawable/shape_frame"
+                    android:inputType="date"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE32"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="5dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_RE42"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="5dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--变频器动作电流值-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="变频器动作电流值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_BPQDL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:inputType="date"
+                    android:minWidth="100dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="A"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--水泵填料密封是否漏水在规定范围内-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="水泵填料密封是否漏水在规定范围内："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--水泵机械密封是否有漏水现象-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="水泵机械密封是否有漏水现象："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--设定压力-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设定压力值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_SDYL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:inputType="date"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入设定压力"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="MPa"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--实际压力-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="实际压力值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_SJYL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:inputType="date"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入实际压力"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="MPa"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--超压保护-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="超压保护值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_CYBH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:inputType="date"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入超压保护值"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="MPa"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--水泵转向-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="水泵手动自动转向："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_pump_SBZX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="正转"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--自动能否正常启动-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="自动能否正常启动："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="能"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--无水停机保护值-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="无水停机保护值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_WSTJBH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="0.05"
+                    android:inputType="date"
+                    android:minWidth="100dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="MPa"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--有水开机压力值-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="有水开机压力值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_YSKJYL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="0.10"
+                    android:inputType="date"
+                    android:minWidth="100dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="MPa"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--小流量保压值-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="小流量保压值："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_XLLBY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint="请输入小流量保压值"
+                    android:inputType="date"
+                    android:minWidth="100dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="MPa"
+                    android:textColor="@color/color_999999" />
+
+            </LinearLayout>
+            <!--各水泵手动是否正常工作-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="各水泵手动是否正常工作："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--开停机是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="开停机是否正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--自动交换是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="自动交换是否正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--真空补偿器各指示灯是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="真空补偿器各指示灯是否正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--设备是否产生负压-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备是否产生负压："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="否"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--止回阀是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="止回阀是否正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--液位计工作是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="液位计工作是否正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--变频器工作是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="变频器工作是否正常（散热片是否清理）："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--过滤器是否进行清洗（半年/次）-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="过滤器是否进行清洗（半年/次）："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="否"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--消防水池是否有水-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="消防水池是否有水："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--消防控制中心所处状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="消防控制中心所处状态："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--无压巡检是否正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="无压巡检是否正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--管网所有螺丝是否全面紧固一遍-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="管网所有螺丝是否全面紧固一遍："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="紧固"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--浮球阀是否检查保养正常-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="浮球阀是否检查保养正常："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--恒压各泵频率-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:text="恒压各泵频率："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_BENG1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_BENG2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_BENG3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+                <EditText
+                    android:id="@+id/tv_device_BENG4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="  /"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--控制柜保养记录-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/value_10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="控制柜保养记录："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_KZGBY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="100dp"
+                    android:background="@drawable/shape_frame"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:layout_margin="5dp"
+                    android:text="保养良好"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--水泵及管道等保养记录-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/value_10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="水泵及管道等保养记录："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_SBGDBY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:minHeight="100dp"
+                    android:background="@drawable/shape_frame"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:text="保养良好"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--整机运行记录-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/value_10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="整机运行记录："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_ZJYXJL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:minHeight="100dp"
+                    android:background="@drawable/shape_frame"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:text="运行正常"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--巡检人员是否按以上试验功能-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="巡检人员是否按以上试验功能："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/radiobutton25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:text="是"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--用户能否正确操作-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户能否正确操作："
+                    android:textColor="@color/color_333333" />
+
+                <RadioGroup
+                    android:id="@+id/rg26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/value_20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radiobutton26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_group_selector"
+                        android:drawablePadding="5dp"
+                        android:text="能"
+                        android:textSize="16sp"
+                        android:textColor="@color/color_999999" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_group_selector"
+                        android:drawablePadding="5dp"
+                        android:text="否"
+                        android:textSize="16sp"
+                        android:textColor="@color/color_999999"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <!--用户地址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户地址："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_YHDZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--用户电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户电话："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_YHDH"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+            <!--用户姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户姓名："
+                    android:textColor="@color/color_333333" />
+
+                <EditText
+                    android:id="@+id/tv_device_YHQZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_frame"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selecter_btn"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#ffffff"
+                android:textColorHint="#bbffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

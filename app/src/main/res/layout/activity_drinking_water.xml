@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_top_a" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/update_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#013933"
+                android:text="数据更新时间"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/value_10dp"/>
+
+            <!--设备状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#013933"
+                    android:text="Equipment State/设备状态"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/value_10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--原水箱液位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="原水箱液位:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/origin_box_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="0[米]"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/origin_box_level_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#00FF00"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--净水箱液位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="净水箱液位:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_box_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="0[米]"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_box_level_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#00FF00"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--原出水压力-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="原出水压力:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/origin_water_pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="0[MPa]"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/origin_water_pressure_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#00FF00"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--净设定压力-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="净设定压力:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_setting_pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="0[MPa]"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_setting_pressure_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#00FF00"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--净出水压力-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="净出水压力:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_out_pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="0[MPa]"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_out_pressure_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--电导率-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="电导率:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/conductivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/conductivity_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--PH-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="PH:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/ph_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/ph_value_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--余氯-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="余氯:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/residual_chlorine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/residual_chlorine_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#00FF00"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--浊度-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="浊度:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/turbidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/turbidity_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--ORP-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="ORP:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/orp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/orp_value_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--盐度-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="盐度:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/salinity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/salinity_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#00FF00"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--溶解氧-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="溶解氧:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dissolved_oxygen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dissolved_oxygen_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--水质硬度-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="水质硬度:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/water_quality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/water_quality_isno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#FF0000"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="非正常"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+            </LinearLayout>
+
+            <!--水泵状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#013933"
+                    android:text="Pump State/水泵状态"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/value_10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+                <!--水泵状态的标题-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="#E6FAF9">
+
+                        <TextView
+                            android:text="水泵"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:text="运行状态"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333333"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/tv03" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:text="变频频率"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333"
+                            android:id="@+id/tv04" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:text="电流"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333"
+                            android:id="@+id/tv05" />
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00ff00"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:text="状态"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333"
+                            android:id="@+id/tv06" />
+
+                    </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <!--1#泵原水泵-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="#E6FAF9">
+
+                        <TextView
+                            android:text="1#原水泵:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/run_state1"
+                            android:text="停止"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333333"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/frequency1"
+                            android:text="无"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/ampere1"
+                            android:text="0A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333"/>
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00ff00"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/state1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <!--2#泵原水泵-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="#E6FAF9">
+
+                        <TextView
+                            android:text="2#原水泵:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/run_state2"
+                            android:text="运行"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333333"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/frequency2"
+                            android:text="无"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/ampere2"
+                            android:text="0A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00ff00"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/state2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <!--高压泵-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="#E6FAF9">
+
+                        <TextView
+                            android:text="高压泵:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/run_state3"
+                            android:text="停止"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333333"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/frequency3"
+                            android:text="无"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/ampere3"
+                            android:text="0A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00ff00"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/state3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <!--1#泵净水泵-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="#E6FAF9">
+
+                        <TextView
+                            android:text="1#净水泵:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/run_state4"
+                            android:text="运行"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333333"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/frequency4"
+                            android:text="0Hz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/ampere4"
+                            android:text="0A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00ff00"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/state4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333"/>
+
+                    </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <!--2#泵净水泵-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="#E6FAF9">
+
+                        <TextView
+                            android:text="2#净水泵:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/run_state5"
+                            android:text="停止"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333333"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/frequency5"
+                            android:text="0Hz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/ampere5"
+                            android:text="0A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="#00ff00"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/state5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+            </LinearLayout>
+
+            <!--阀门状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#013933"
+                    android:text="Valve Status/阀门状态"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/value_10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--清洗泵状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="清洗泵状态:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clean_pump_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="停止"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--进水阀状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="进水阀状态:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/inlet_valve_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="关闭"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--旁通阀状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="旁通阀状态:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/bypass_valve_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="关闭"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--高压阀状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="高压阀状态:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/high_pressure_valve_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="关闭"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--浓水阀状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="浓水阀状态:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/concentrated_water_valve_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="关闭"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+                <!--回水阀状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:background="#E6FAF9"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingLeft="@dimen/value_10dp"
+                        android:text="回水阀状态:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/return_valve_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/value_40dp"
+                        android:minWidth="100dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="关闭"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_1dp"
+                    android:background="#c1c1c1"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

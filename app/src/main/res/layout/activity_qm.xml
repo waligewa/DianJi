@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#013933">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="机器合照:\n（点击下方白色区域拍照）"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="客户合照:\n（点击下方白色区域拍照）"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="维保人员签名:\n（点击下方白色区域签名）"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="客户签名：\n（点击下方白色区域签名）"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerInside" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selecter_btn1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:paddingLeft="@dimen/value_10dp"
+                android:paddingRight="@dimen/value_10dp"
+                android:text="确认签名"
+                android:textSize="20dp"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

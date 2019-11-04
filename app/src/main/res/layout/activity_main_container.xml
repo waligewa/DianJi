@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.motor.widget.TabContainerView
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:tabTextColor="@color/text_color2"
+        app:selectedTextColor="#003832"
+        app:tabTextSize="14sp"
+        app:drawablePadding="1dp"
+        app:iconHeight="22dp"
+        app:iconWidth="22dp"
+        app:divideLineColor="@color/common_line_two"
+        app:divideLineHeight="0.3dp"
+        android:background="@color/white"/><!--android:background="@color/alertdialog_line"-->
+
+</RelativeLayout>

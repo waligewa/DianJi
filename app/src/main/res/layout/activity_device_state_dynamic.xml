@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#013933"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/value_5dp"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ic_a_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/value_5dp"
+            android:paddingRight="@dimen/value_10dp"
+            android:paddingLeft="@dimen/value_10dp"
+            android:text="位置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/value_16sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_5dp">
+
+                <TextView
+                    android:id="@+id/change_data"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:layout_marginBottom="@dimen/value_5dp"
+                    android:background="@drawable/selecter_btn"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:text="选取显示数据"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/start_stop_record"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/value_10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/value_5dp"
+                    android:background="@drawable/selecter_btn"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:text="查看开停机记录"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <com.example.motor.widget.MyGridView
+                android:id="@+id/mGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="900dp">
+
+                <ListView
+                    android:id="@+id/gv_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contextClickable="false"
+                    android:scrollbars="none"
+                    android:layout_marginTop="5dp"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

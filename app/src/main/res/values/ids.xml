@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="cb_item_tag" type="id"></item>
+
+    <item name="id_circle_menu_item_image" type="id"/>
+    <item name="id_circle_menu_item_text" type="id"/>
+    <item name="id_circle_menu_item_center" type="id"/>
+
+    <item name="tvAmp1" type="id"/>
+    <item name="tvPumpState1" type="id"/>
+    <item name="ivPump1" type="id"/>
+    <item name="tvAmp2" type="id"/>
+    <item name="tvPumpState2" type="id"/>
+    <item name="ivPump2" type="id"/>
+    <item name="tvAmp3" type="id"/>
+    <item name="tvPumpState3" type="id"/>
+    <item name="ivPump3" type="id"/>
+    <item name="tvAmp4" type="id"/>
+    <item name="tvPumpState4" type="id"/>
+    <item name="ivPump4" type="id"/>
+    <item name="tvAmp5" type="id"/>
+    <item name="tvPumpState5" type="id"/>
+    <item name="ivPump5" type="id"/>
+
+    <item name="linearlayout_tab" type="id"/>
+    <item name="viewpager_tab" type="id"/>
+    <item name="divide_tab" type="id"/>
+
+</resources>

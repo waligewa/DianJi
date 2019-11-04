@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_loading_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/value_20_dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivRecordDialogIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/recorder"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ivRecordDialogVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/v1"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRecordDialogLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_5_dp"
+        android:text="手指上滑 取消录制"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

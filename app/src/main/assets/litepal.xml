@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="LitepalSql"></dbname>
+    <version value="1"></version>
+    <list>
+        <mapping class="com.example.motor.db.TaskItemBean"></mapping>
+        <mapping class="com.example.motor.db.TaskItemBean2"></mapping>
+        <mapping class="com.example.motor.db.EquipInsBean"></mapping>
+        <mapping class="com.example.motor.db.EquipInsBean2"></mapping>
+    </list>
+</litepal>

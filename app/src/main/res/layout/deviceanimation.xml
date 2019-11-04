@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_f5f5f5"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#013933"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/device_animation_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/device_animation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <!--设备参数-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 进水压力 -->
+        <TextView
+            android:id="@+id/tvPressureIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="进水压力:0.00Mpa"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+        <!-- 出水压力 -->
+        <TextView
+            android:id="@+id/tvPressureOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvPressureIn"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="出水压力:0.00Mpa"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+        <!-- 设定流量 -->
+        <TextView
+            android:id="@+id/set_flow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设定流量:0.00m³/h"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+        <!-- 18-09-25隐藏掉设定压力 -->
+        <!--<TextView
+            android:id="@+id/tvPressureSet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设定压力:0.00Mpa"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />-->
+    </LinearLayout>
+    <!--设备参数-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 瞬时流量 -->
+        <TextView
+            android:id="@+id/tvInstantFlow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="瞬时流量:0.00m³/h"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+        <!-- 累计流量 -->
+        <TextView
+            android:id="@+id/tvTotalFlow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvPressureIn"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="累计流量:0.00m³"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+        <!-- 累计耗电 -->
+        <TextView
+            android:id="@+id/tvTotalPower"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvPressureIn"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="累计电量:0.00kW·h"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!--设备动画-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--2个泵的-->
+        <RelativeLayout
+            android:id="@+id/linear_beng1"
+            android:layout_width="560dp"
+            android:layout_height="195dp"
+            android:background="@drawable/device_2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="239dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1#泵运行状态显示 -->
+                <TextView
+                    android:id="@+id/tvPumpState1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵动画 -->
+                <ImageView
+                    android:id="@+id/ivPump1"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:id="@+id/tvAmp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@+id/tvFrequency1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="357dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 2#泵运行状态显示 -->
+                <TextView
+                    android:id="@+id/tvPumpState2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵动画 -->
+                <ImageView
+                    android:id="@+id/ivPump2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:id="@+id/tvAmp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@+id/tvFrequency2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--3个泵的-->
+        <RelativeLayout
+            android:id="@+id/linear_beng2"
+            android:layout_width="560dp"
+            android:layout_height="195dp"
+            android:orientation="horizontal"
+            android:visibility="gone"><!--android:background="@drawable/device_3"-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="192dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump1"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="287dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 2#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="382dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 3#泵运行状态显示 -->
+                <TextView
+                    android:id="@+id/tvPumpState3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 3#泵动画 -->
+                <ImageView
+                    android:id="@+id/ivPump3"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 3#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="3#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 3#泵电流信息 -->
+                <TextView
+                    android:id="@+id/tvAmp3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@+id/tvFrequency3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--4个泵的-->
+        <RelativeLayout
+            android:id="@+id/linear_beng3"
+            android:layout_width="560dp"
+            android:layout_height="195dp"
+            android:orientation="horizontal"
+            android:background="@drawable/device_4"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump1"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="249dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 2#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 3#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 3#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump3"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 3#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="3#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 3#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="394dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 4#泵运行状态显示 -->
+                <TextView
+                    android:id="@+id/tvPumpState4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 4#泵动画 -->
+                <ImageView
+                    android:id="@+id/ivPump4"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 4#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="4#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 4#泵电流信息 -->
+                <TextView
+                    android:id="@+id/tvAmp4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@+id/tvFrequency4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--5个泵的-->
+        <RelativeLayout
+            android:id="@+id/linear_beng4"
+            android:layout_width="560dp"
+            android:layout_height="195dp"
+            android:orientation="horizontal"
+            android:visibility="gone"><!--android:background="@drawable/device_5"-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="152dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 1#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump1"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 1#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="217dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 2#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 2#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="279dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 3#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 3#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump3"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 3#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="3#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 3#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="344dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 4#泵运行状态显示 -->
+                <TextView
+                    android:id="@id/tvPumpState4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 4#泵动画 -->
+                <ImageView
+                    android:id="@id/ivPump4"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 4#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="4#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 4#泵电流信息 -->
+                <TextView
+                    android:id="@id/tvAmp4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@id/tvFrequency4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="409dp"
+                android:layout_marginTop="46dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 5#泵运行状态显示 -->
+                <TextView
+                    android:id="@+id/tvPumpState5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_1dp"
+                    android:layout_marginTop="@dimen/value_2dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:text="未知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 5#泵动画 -->
+                <ImageView
+                    android:id="@+id/ivPump5"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="47dp"
+                    android:src="@drawable/pump1" />
+
+                <!-- 5#泵电流信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="5#泵电流:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 5#泵电流信息 -->
+                <TextView
+                    android:id="@+id/tvAmp5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 0.0 A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+                <!-- 变频频率 -->
+                <TextView
+                    android:id="@+id/tvFrequency5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0Hz"
+                    android:textColor="@color/color_333333"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--设备状态-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 1#泵状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1#泵状态:"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <!-- 1#泵变频停止 -->
+            <TextView
+                android:id="@+id/tvManualAuto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 2#泵状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2#泵状态:"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <!-- 2#泵变频停止 -->
+            <TextView
+                android:id="@+id/tvManualAuto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/device_State3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 3#泵状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3#泵状态:"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <!-- 3#泵变频停止 -->
+            <TextView
+                android:id="@+id/tvManualAuto3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/device_State4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 4#泵状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4#泵状态:"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <!-- 4#泵变频停止 -->
+            <TextView
+                android:id="@+id/tvManualAuto4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/device_State5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 5#泵状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5#泵状态:"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <!-- 5#泵变频停止 -->
+            <TextView
+                android:id="@+id/tvManualAuto5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- 通讯状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯状态:"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+            <!-- 通讯状态 -->
+            <TextView
+                android:id="@+id/tvComState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 数据更新时间 -->
+    <TextView
+        android:id="@+id/tvUpdateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数据时间: 0000-00-00 00:00:00"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp" />
+
+</LinearLayout>

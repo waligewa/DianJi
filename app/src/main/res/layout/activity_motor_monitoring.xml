@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_top_a" />
+
+    <LinearLayout
+        android:id="@+id/motor_data_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/motor_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/motor_rb_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ll_bg3"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="1号电机"
+                android:textColor="@drawable/selector_tab_text_color"
+                android:textSize="13dp"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/motor_rb_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ll_bg3"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="2号电机"
+                android:textColor="@drawable/selector_tab_text_color"
+                android:textSize="13dp"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/motor_rb_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ll_bg3"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="3号电机"
+                android:textColor="@drawable/selector_tab_text_color"
+                android:textSize="13dp"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/motor_rb_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ll_bg3"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="4号电机"
+                android:textColor="@drawable/selector_tab_text_color"
+                android:textSize="13dp"
+                android:visibility="gone"/>
+
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ll_bg3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/motor_data_item" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:minHeight="300dp" />
+
+        <TextView
+            android:id="@+id/weizhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="3dp"
+            android:textColor="@color/color_333333"/>
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="3dp"
+            android:textColor="@color/color_333333"/>
+
+        <Button
+            android:id="@+id/bt_map_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/bt_biankuang"
+            android:minHeight="0dp"
+            android:padding="8dp"
+            android:text="到这儿去"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+</LinearLayout>

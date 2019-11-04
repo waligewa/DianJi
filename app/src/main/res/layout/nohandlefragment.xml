@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/taskRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/value_10_dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_task_bg"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_nohandled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:text="未处理"
+                android:textColor="@color/selector_radio_text_color"/>
+
+            <RadioButton
+                android:id="@+id/radio_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_30dp"
+                android:background="@null"
+                android:button="@null"
+                android:text="已接收"
+                android:textColor="@color/selector_radio_text_color"/>
+
+            <RadioButton
+                android:id="@+id/radio_feedbacked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_30dp"
+                android:background="@null"
+                android:button="@null"
+                android:text="已反馈"
+                android:textColor="@color/selector_radio_text_color"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/multiple_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:minWidth="80dp"
+            android:gravity="center"
+            android:background="@drawable/selecter_btn"
+            android:text="多选"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout"
+        android:layout_marginTop="@dimen/value_5dp"
+        android:layout_marginBottom="30dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <LinearLayout
+        android:id="@+id/llBottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_f5f5f5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/value_5dp"
+        android:visibility="gone">
+
+        <!--取消-->
+        <TextView
+            android:id="@+id/tvBottomCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_btn"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"/>
+
+        <View
+            android:layout_width="@dimen/value_30dp"
+            android:layout_height="@dimen/value_1dp"/>
+
+        <!--派发任务-->
+        <TextView
+            android:id="@+id/tvBottomSendTask"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_btn"
+            android:gravity="center"
+            android:text="派发任务"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

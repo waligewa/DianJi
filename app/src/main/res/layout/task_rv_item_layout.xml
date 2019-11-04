@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="6dp"
+    card_view:cardCornerRadius="@dimen/value_10dp"
+    card_view:cardElevation="5dp"
+    card_view:contentPadding="@dimen/value_5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--左上角索引值-->
+            <TextView
+                android:id="@+id/tvLeftNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_5dp"
+                android:text="1" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tvLeftNo">
+
+                <!--标题-->
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/value_20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="1234567890" />
+
+                <!--接收不接收按钮按钮-->
+                <TextView
+                    android:id="@+id/receiver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:background="@drawable/selecter_btn"
+                    android:text="接收"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <!--描述-->
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearlayout"
+                android:layout_marginLeft="@dimen/value_20dp"
+                android:text="此处添加描述信息" />
+
+            <!--信息-->
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDesc"
+                android:layout_marginLeft="@dimen/value_20dp"
+                android:text="9999999999" />
+
+            <!--WOID-->
+            <TextView
+                android:id="@+id/tvWoid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/tvInfo"
+                android:layout_marginLeft="@dimen/value_20dp"
+                android:text="9999999999" />
+
+            <ImageView
+                android:id="@+id/ivChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearlayout"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ap_im_unselected"
+                /> <!--android:visibility="gone"-->
+
+            <!--<LinearLayout
+                android:id="@+id/ivChoose2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="110dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>-->
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/value_1dp"
+            android:layout_below="@id/relativelayout"
+            android:background="@color/color_999999" />
+
+        <!--按钮容器-->
+        <LinearLayout
+            android:id="@+id/llBtnContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp">
+
+            <!--持续时间-->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_10dp"
+                android:layout_weight="1"
+                android:text="持续11h" />
+
+            <!--左边按钮-->
+            <TextView
+                android:id="@+id/tvItemLeftBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selecter_btn"
+                android:text="显示摘要"
+                android:textColor="@color/white" />
+
+            <!--右边按钮-->
+            <TextView
+                android:id="@+id/tvItemRightBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_20dp"
+                android:background="@drawable/selecter_btn"
+                android:text="处理该任务"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <!--扩展信息容器-->
+        <LinearLayout
+            android:id="@+id/llExtContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llBtnContainer"
+            android:orientation="vertical"><!--android:visibility="gone"-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_1dp"
+                android:background="@color/color_999999" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvExtDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_5dp"
+                    android:text="1111111" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvExtCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_5dp"
+                    android:text="1111111" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvExtPerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/value_5dp"
+                    android:text="1111111" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

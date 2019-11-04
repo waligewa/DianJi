@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_f5f5f5"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/shape_btn_checked1"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="5dp"
+            android:paddingLeft="8dp"
+            android:hint="输入查询信息"
+            android:maxLength="13"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textColorHint="@color/text_color4"/>
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="查询"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="@drawable/selecter_btn6"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/value_10dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

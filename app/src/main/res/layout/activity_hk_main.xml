@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SurfaceView
+            android:id="@+id/sf_VideoMonitor"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center" /><!--android:layout_weight="1"-->
+
+        <LinearLayout
+            android:id="@+id/CAMlinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Up"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/camera_move_up" />
+
+            <Button
+                android:id="@+id/btn_Down"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/camera_move_down" />
+
+            <Button
+                android:id="@+id/btn_Left"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/camera_move_left" />
+
+            <Button
+                android:id="@+id/btn_Right"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/camera_move_right" />
+
+            <Button
+                android:id="@+id/btn_ZoomIn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/camera_move_bigger" />
+
+            <Button
+                android:id="@+id/btn_ZoomOut"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/camera_move_smaller" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

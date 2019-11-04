@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi'
+            //, 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        applicationId "com.example.motor"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 5
+        versionName "1.0.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    //配置签名信息
+    signingConfigs {
+        debug {
+            keyAlias 'zbb'
+            keyPassword '123456'
+            storeFile file('zbb.jks')
+            storePassword '123456'
+            v2SigningEnabled false
+        }
+        release {
+            keyAlias 'zbb'
+            keyPassword '123456'
+            storeFile file('zbb.jks')
+            storePassword '123456'
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    /**
+     * 目前 Android Studio不支持自动添加 .so文件（Eclipse是支持的），所以我们需要手动加载libs下的.so的动态库
+     */
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    dexOptions {
+        jumboMode true
+    }
+    compileOptions {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //Android权限适配方案的依赖
+
+    //下面这一行是xcl-charts图表
+    compile files('libs/xcl-charts.jar')
+    compile project(':libzxing')
+    compile project(':maputilslibrary')
+    compile 'com.pgyersdk:sdk:2.8.1'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/httpmime-4.1.2.jar')
+    compile files('libs/IPlaySDK.jar')
+    compile files('libs/INetSDK.jar')
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.android.support:cardview-v7:25.0.0'
+    compile 'com.android.support:design:25.0.1'
+    compile 'org.litepal.android:core:2.0.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/AudioEngineSDK.jar')
+    compile files('libs/HCNetSDK.jar')
+    compile files('libs/jna.jar')
+    compile files('libs/PlayerSDK.jar')
+}

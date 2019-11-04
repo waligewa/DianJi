@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_new"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/install_debug"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_sear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备编号："
+                    android:textColor="#ffffff"
+                    android:textColorHint="#bbffffff" />
+
+                <EditText
+                    android:id="@+id/edt_EquNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColor="#ffffff"
+                    android:textColorHint="#bbffffff" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/btn_color"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="#ffffff"
+                android:textColorHint="#bbffffff"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/install_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="所在地区："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_Area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="中国"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="工程地点："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_EngineeringPlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="用户地址："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_CustomerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请填写详细地址"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="设备名称："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_DeviceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="站点名称："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_VillageName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="设备类型："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_EquipmentType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="到达日期："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <TextView
+                        android:id="@+id/edt_ArrivalDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请点击选取时间"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="机器安装人员："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_MachineUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="机器安装日期："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <TextView
+                        android:id="@+id/edt_MachineDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请点击选取时间"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="电气安装人员："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_ElectricalUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="电气安装日期："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <TextView
+                        android:id="@+id/edt_ElectricalDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请点击选取时间"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="设备调试人员："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_DebuggUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="设备调试日期："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <TextView
+                        android:id="@+id/edt_DebuggDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请点击选取时间"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="设备生产厂商："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <TextView
+                        android:id="@+id/edt_ManufacturerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:text="安装调试结论："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_Conclusion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:minHeight="50dp"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:text="安装调试反馈："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_Feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:minHeight="50dp"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_sear"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:text="反馈措施："
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                    <EditText
+                        android:id="@+id/edt_Mesures"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="如：张三"
+                        android:minHeight="50dp"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#bbffffff" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@color/btn_color"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#bbffffff"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

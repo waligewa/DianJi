@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/data_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="名称:(单位)"
+        android:textColor="@color/color_333333"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/data_value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="@color/bg_color_count"
+        android:gravity="center"
+        android:maxLines="5"
+        android:padding="3dp"
+        android:minHeight="50dp"
+        android:text="0.00"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="@color/bg_color_count"
+        android:text="MPa"
+        android:textColor="#e0ff99"
+        android:visibility="gone" />
+
+</LinearLayout>
+

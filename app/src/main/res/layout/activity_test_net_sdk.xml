@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_f5f5f5"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#013933"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chronicl_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="9"
+            android:gravity="center"
+            android:text="视频监控"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:text="IP地址:"
+            android:textSize="18sp"
+            android:textColor="@color/color_333333"/>
+
+        <EditText
+            android:id="@+id/ip_address"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:hint="请输入IP地址"
+            android:textColorHint="#999"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:background="@drawable/shape_frame"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:text="端口号:"
+            android:textSize="18sp"
+            android:textColor="@color/color_333333"/>
+
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:hint="请输入端口号"
+            android:textColorHint="#999"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:background="@drawable/shape_frame"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:text="用户名:"
+            android:textSize="18sp"
+            android:textColor="@color/color_333333"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:hint="请输入用户名"
+            android:textColorHint="#999"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:background="@drawable/shape_frame"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:text="密码:"
+            android:textSize="18sp"
+            android:textColor="@color/color_333333"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:hint="请输入密码"
+            android:textColorHint="#999"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:background="@drawable/shape_frame"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="右侧选择通道"
+            android:textColor="#f00"
+            android:textSize="12sp"/>
+
+        <Spinner
+            android:id="@+id/channel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="@drawable/selecter_btn1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selecter_btn1"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <!--<ListView
+        android:id="@+id/lv_monitor"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/background_f5f5f5"
+        android:dividerHeight="@dimen/value_1dp"/>-->
+
+</LinearLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:text="汇报人员 :  "
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/report_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyEditText"
+            android:text="人员"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:text="  汇报时间 :  "
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/report_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:background="@drawable/selecter_btn1"
+            android:gravity="center"
+            android:text="时间"
+            android:textColor="#fff"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备编号："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/equipment_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入设备编号"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备名称："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/equipment_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入设备名称"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="设备型号："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/equipment_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入设备型号"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/time1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:text="安排时间:7:30"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1.8dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selecter_btn1"
+                    android:gravity="center"
+                    android:text="规定完成时间:1:00"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/work_task_content"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/selecter_btn1"
+                android:gravity="center"
+                android:text="工作任务内容"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:id="@+id/edittext_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/value_10dp"
+                android:paddingLeft="@dimen/value_5dp"
+                android:background="@drawable/bg_corners8"
+                android:gravity="left|top"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:minWidth="100dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="额定工时："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/rated_working_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入额定工时"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:minWidth="100dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户联系人："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/user_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入用户联系人"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:minWidth="100dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="联系电话："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入联系电话"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/background_f5f5f5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:minWidth="100dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="实际完成时间："
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/actual_complete_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_5dp"
+                    android:background="@drawable/shape_frame"
+                    android:hint="请输入实际完成时间"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:text="清空内容"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:layout_width="80dp"
+                        android:layout_height="45dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selecter_btn"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:text="确定提交"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:layout_centerInParent="true"
+                        android:layout_width="80dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/selecter_btn"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

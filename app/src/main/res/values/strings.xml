@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">智能电机</string>
+
+    <string name="_login1">QINGDAO SANLEY GROUP \n SMART WATER MANAGEMENT PLATFORM</string>
+    <string name="_login2">QINGDAO SANLEY GROUP CO.,LTD</string>
+    <string name="_login3">青岛三利集团智慧水务管理平台</string>
+    <string name="_index15">*长按以下列表项可进行删除！*</string>
+    <string name="_index16">工单提交后将无法更改工单内容！\n 确认提交？</string>
+    <string name="setting_prompt">注意：服务器地址必须是以\'/\'结束\n例如：http://000.000.000.000:0000/</string>
+    <string name="equipment_information">设备信息</string>
+    <string name="inspection_report">巡检报表</string>
+    <string name="work_order">工单处置</string>
+    <string name="problem_feedback">问题反馈</string>
+    <string name="pull_to_refresh">下拉</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+    <string name="d">图片描述</string>
+    <string name="DemoInit">视频监控初始化</string>
+    <string name="DemoExit">视频监控退出</string>
+    <string name="login_activity_port_err">请检查端口</string>
+    <string name="login_activity_title">登录</string>
+    <string name="login_activity_login_success">登录成功</string>
+    <string name="login_activity_login_failed">登录失败</string>
+    <string name="global_setting_activity_title">全局设置</string>
+    <string name="global_setting_activity_chn">视频通道：</string>
+    <string name="global_setting_activity_pb_stream">回放码流：</string>
+    <string name="global_setting_activity_pb_stream_all">主辅码流</string>
+    <string name="global_setting_activity_pb_stream_main">主码流</string>
+    <string name="global_setting_activity_pb_stream_sub">辅码流</string>
+    <string name="live_activity_title">实时监控</string>
+    <string name="live_activity_ptz">云台控制</string>
+    <string name="live_activity_Up">上</string>
+    <string name="live_activity_Left">左</string>
+    <string name="live_activity_Right">右</string>
+    <string name="live_activity_Down">下</string>
+    <string name="live_activity_LUp">左上</string>
+    <string name="live_activity_RUp">右上</string>
+    <string name="live_activit_LDown">左下</string>
+    <string name="live_activity_RDown">右下</string>
+    <string name="live_activity_z_add">变倍+</string>
+    <string name="live_activity_z_dec">变倍-</string>
+    <string name="live_activity_f_add">变焦+</string>
+    <string name="live_activity_f_dec">变焦-</string>
+    <string name="live_activity_a_add">光圈+</string>
+    <string name="live_activity_a_dec">光圈-</string>
+    <string name="encode_activity_title">码流配置</string>
+    <string name="encode_activity_mode">压缩格式：</string>
+    <string name="encode_activity_resolution">分辨率：</string>
+    <string name="encode_activity_fps">帧率(FPS)：</string>
+    <string name="encode_activity_bitrate">码流：</string>
+    <string name="encode_activity_set">设置</string>
+    <string name="encode_activity_bitrate_ref">码流范围：</string>
+    <string name="testing_activity_title">接口测试</string>
+    <string name="set_config">设置</string>
+    <string name="channel_name">通道 </string>
+    <string name="info_success">成功</string>
+    <string name="info_failed">失败</string>
+    <string name="title_route_guide_demo">1. GPS导航(RouteGuideDemo)</string>
+    <string name="sdk_name">Baidu Navigation SDK Demo</string>
+
+
+    <string name="record_status_recroding">松开结束</string>
+    <string name="record_status_normal_">按住说话</string>
+    <string name="record_status_mean_to_cancel">松开手指 取消录制</string>
+
+</resources>

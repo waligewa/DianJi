@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context="com.example.motor.activity.DataAnalysisActivity">
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#013933"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/analysis_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/analysis_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/analysis_set"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@mipmap/ic_set" />
+
+    </LinearLayout>
+
+    <!--一、2018年8月24日修改功能，将RadioGroup给隐藏掉-->
+    <!--二、2018年9月25日修改功能，将RadioGroup给显示-->
+    <RadioGroup
+        android:id="@+id/analysis_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/ConsumptionCost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corners"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="成本分析"
+            android:textColor="@drawable/radio_bt_textcolor"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/WaterQualityAnalysis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corners"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:checked="true"
+            android:text="水质分析"
+            android:textColor="@drawable/radio_bt_textcolor"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/EnergyConsumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corners"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="能耗分析"
+            android:textColor="@drawable/radio_bt_textcolor"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/WaterConsumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corners"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="用水量分析"
+            android:textColor="@drawable/radio_bt_textcolor"
+            android:textSize="20dp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/wv_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layerType="software"
+            android:padding="5dp" />
+        <!--android:focusable="false"
+            android:focusableInTouchMode="false"-->
+
+    </LinearLayout>
+
+</LinearLayout>

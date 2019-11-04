@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_setting_dailog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="提报设备信息"
+        android:textColor="@color/blue"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/equipment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_background"
+            android:maxWidth="300dp"
+            android:minWidth="200dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:hint="请输入设备名称"
+            android:textColorHint="#999"/>
+
+        <EditText
+            android:id="@+id/equipment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_background"
+            android:maxWidth="300dp"
+            android:minWidth="200dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:hint="请输入设备类型"
+            android:textColorHint="#999"/>
+
+        <EditText
+            android:id="@+id/equipment_position"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_background"
+            android:maxWidth="300dp"
+            android:minWidth="200dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:hint="请输入设备位置"
+            android:textColorHint="#999"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selecter_btn"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selecter_btn"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
