@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Currency.iml" filepath="$PROJECT_DIR$/Currency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-DianJi.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-DianJi.iml" />
       <module fileurl="file://$PROJECT_DIR$/DianJi.iml" filepath="$PROJECT_DIR$/DianJi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/DianJi-app.iml" filepath="$PROJECT_DIR$/app/DianJi-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/DianJi-example.iml" filepath="$PROJECT_DIR$/example/DianJi-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libzxing/DianJi-libzxing.iml" filepath="$PROJECT_DIR$/libzxing/DianJi-libzxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maputilslibrary/DianJi-maputilslibrary.iml" filepath="$PROJECT_DIR$/maputilslibrary/DianJi-maputilslibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/libzxing/libzxing.iml" filepath="$PROJECT_DIR$/libzxing/libzxing.iml" />

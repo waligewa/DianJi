@@ -94,10 +94,20 @@ public class LongRunningService extends Service {
                         JSONObject js = ja.getJSONObject(0);
                         JSONArray jy = js.getJSONArray("Pumplist");
                         JSONObject jt = jy.getJSONObject(0);
-                        HomeFragment.influentPressure.setText(jt.getString("InPDec"));     // 进水压力
-                        HomeFragment.waterPressure.setText(jt.getString("OutPDec"));       // 出水压力
-                        HomeFragment.setPressure.setText(jt.getString("SetP"));            // 设定压力
-                        HomeFragment.eqPower.setText(jt.getString("ScrEquipPower"));       // 设备功率
+                        HomeFragment.influentPressure.setText(jt.getString("InPDec"));         // 进水压力
+                        HomeFragment.waterPressure.setText(jt.getString("OutPDec"));           // 出水压力
+                        HomeFragment.setPressure.setText(jt.getString("SetP"));                // 设定压力
+                        if(!TextUtils.isEmpty(jt.getString("ScrEquipPower"))){
+                            if (jt.getString("ScrEquipPower").equals("3")){
+                                HomeFragment.eqPower.setText("0.37");                                //  设备功率
+                            } else if (jt.getString("ScrEquipPower").equals("5")){
+                                HomeFragment.eqPower.setText("0.55");                                //  设备功率
+                            } else if (jt.getString("ScrEquipPower").equals("7")){
+                                HomeFragment.eqPower.setText("0.75");                                //  设备功率
+                            } else {
+                                HomeFragment.eqPower.setText(jt.getString("ScrEquipPower"));  //  设备功率
+                            }
+                        }
                     }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block

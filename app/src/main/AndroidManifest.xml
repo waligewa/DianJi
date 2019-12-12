@@ -105,7 +105,7 @@
             android:value="0RrAeO1nOFCpt0VHBtgNjuka5pmhRBEZ" />
         <meta-data
             android:name="PGYER_APPID"
-            android:value="4a586a70ee1aaaebe0059b85966a29f5" >
+            android:value="e889b8b2c3ad660eb20e09d49f8ba965" >
         </meta-data>
         <service
             android:name="com.baidu.location.f"
