@@ -323,7 +323,8 @@ public class LoginActivity extends AppCompatActivity {
     private void requestPermission() {
         // 申请权限
         //PermissionsDispatcherActivityPermissionsDispatcher.openCameraWithCheck(this);
-        LoginActivityPermissionsDispatcher.getPermissionsWithCheck(this);
+        //LoginActivityPermissionsDispatcher.getPermissionsWithCheck(this);
+        LoginActivityPermissionsDispatcher.getPermissionsWithPermissionCheck(this);
     }
 
     @NeedsPermission({Manifest.permission.CAMERA,

@@ -24,6 +24,6 @@ android {
 }
 
 dependencies {
-    compile files('libs/zxing.jar')
-    compile 'junit:junit:4.12'
+    implementation files('libs/zxing.jar')
+    implementation 'junit:junit:4.12'
 }
