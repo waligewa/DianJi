@@ -213,8 +213,7 @@ public class DataAnalysisActivity extends Activity {
             if (loading.isShow()) {
                 loading.close();
                 ((InputMethodManager) getSystemService(INPUT_METHOD_SERVICE))
-                        .hideSoftInputFromWindow(DataAnalysisActivity.this.getCurrentFocus()
-                                .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                        .hideSoftInputFromWindow(webView.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
             }
         }
     }

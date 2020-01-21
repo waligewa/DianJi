@@ -164,8 +164,7 @@ public class GraphActivity extends Activity implements View.OnClickListener {
             if (loading.isShow()) {
                 loading.close();
                 ((InputMethodManager) getSystemService(INPUT_METHOD_SERVICE))
-                        .hideSoftInputFromWindow(GraphActivity.this.getCurrentFocus()
-                                .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                        .hideSoftInputFromWindow(webView.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
             }
         }
     }
