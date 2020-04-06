@@ -7,15 +7,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.telephony.TelephonyManager;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -211,14 +210,15 @@ public class LoginActivity extends AppCompatActivity {
         String usernameValue = userName.getText().toString().trim();
         String passwordValue = passWord.getText().toString().trim();
         RequestParams params = new RequestParams(string1 + "Service/C_WNMS_API.asmx/LogIn");
-        TelephonyManager tm = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
+//        TelephonyManager tm = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
         params.addBodyParameter("name", usernameValue);
         params.addBodyParameter("password", passwordValue);
         //867323020957815   tm.getDeviceId() 867677028633517
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            return;
-        }
-        params.addBodyParameter("IMEI", tm.getDeviceId());
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//            return;
+//        }
+//        params.addBodyParameter("IMEI", tm.getDeviceId());
+        params.addBodyParameter("IMEI", "666");
         x.http().post(params, new org.xutils.common.Callback.CommonCallback<String>() {
 
             @Override

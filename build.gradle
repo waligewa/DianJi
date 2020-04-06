@@ -21,6 +21,7 @@ allprojects {
         google()
         // 这是蒲公英自动更新用的maven
         maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+        maven { url 'https://jitpack.io' }
     }
 }
 

@@ -19,7 +19,7 @@ import com.example.motor.R;
  * Desc :
  */
 
-public class AudioRecordButton extends android.support.v7.widget.AppCompatButton {
+public class AudioRecordButton extends androidx.appcompat.widget.AppCompatButton {
 
     private static final String TAG = "zbb_AudioRecordButton";
     private static final int STATUS_NORMAL = 1;// 正常状态

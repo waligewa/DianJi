@@ -15,9 +15,9 @@ import android.nfc.tech.MifareClassic;
 import android.nfc.tech.NfcA;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -52,7 +52,7 @@ import com.example.motor.workorderlist.inspection.InspectionWorkOrderActivity;
 import com.example.motor.workorderlist.repair.RepairWorkOrderActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.pgyersdk.javabean.AppBean;
+//import com.pgyersdk.javabean.AppBean;
 import com.pgyersdk.update.PgyUpdateManager;
 import com.pgyersdk.update.UpdateManagerListener;
 
@@ -95,7 +95,12 @@ public class MainActivity extends AppCompatActivity {
         init();
         initNFC();
 
-        PgyUpdateManager.register(mActivity, new UpdateManagerListener() {
+        new PgyUpdateManager.Builder()
+                .setForced(false)                                                                   //设置是否强制更新
+                .setUserCanRetry(false)                                                             //失败后是否提示重新下载
+                .setDeleteHistroyApk(true)                                                          //检查更新前是否删除本地历史 Apk
+                .register();
+        /*PgyUpdateManager.register(mActivity, new UpdateManagerListener() {
             @Override
             public void onUpdateAvailable(final String result) {
                 // 将新版本信息封装到AppBean中
@@ -114,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onNoUpdateAvailable() { }
-        });
+        });*/
 
         //解除注册
         //PgyUpdateManager.unregister();

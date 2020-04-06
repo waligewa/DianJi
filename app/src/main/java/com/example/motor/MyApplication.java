@@ -13,6 +13,11 @@ import com.example.motor.db.InspectionOffineItem;
 import com.example.motor.db.InspectionOffineStateItem;
 import com.example.motor.service.LocationServer;
 import com.example.motor.service.LongRunningService;
+import com.pgyersdk.Pgyer;
+import com.pgyersdk.PgyerActivityManager;
+import com.pgyersdk.crash.PgyCrashManager;
+import com.pgyersdk.crash.PgyerCrashObservable;
+import com.pgyersdk.crash.PgyerObserver;
 
 import org.litepal.LitePalApplication;
 import org.xutils.x;
@@ -60,6 +65,20 @@ public class MyApplication extends Application {
         JPushInterface.init(this);
         // 设置保留最近通知条数
         JPushInterface.setLatestNotificationNumber(context, 30);
+        //      蒲公英
+        PgyCrashManager.register();
+        PgyerCrashObservable.get().attach(new PgyerObserver() {
+            @Override
+            public void receivedCrash(Thread thread, Throwable throwable) { }
+        });
+        PgyerActivityManager.set(this);
+    }
+
+    //  蒲公英
+    @Override
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(context);
+        Pgyer.setAppId("e889b8b2c3ad660eb20e09d49f8ba965");
     }
 
     public static Context getContext() {

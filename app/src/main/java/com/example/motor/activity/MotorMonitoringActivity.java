@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -1073,7 +1073,7 @@ public class MotorMonitoringActivity extends Activity {
                                 .position(end)                                                       // 位置
                                 .icon(mIconMaker)                                                    // 图标
                                 .title(jbt.getString("DeviceName") + "\n" +
-                                        "DTU编号：" + jbt.getString("DeviceID"))               // title
+                                        "DTU编号：" + jbt.getString("DeviceID"))                     // title
                                 .draggable(true)
                                 .zIndex(5);                                                          // 图标可以拖动
                         mtitleTextView.setText(jbt.getString("DeviceName"));

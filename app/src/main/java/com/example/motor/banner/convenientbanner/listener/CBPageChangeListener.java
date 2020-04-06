@@ -1,6 +1,6 @@
 package com.example.motor.banner.convenientbanner.listener;
 
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.widget.ImageView;
 
 import java.util.ArrayList;

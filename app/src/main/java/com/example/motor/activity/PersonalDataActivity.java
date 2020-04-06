@@ -13,8 +13,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -30,6 +30,7 @@ import com.example.motor.util.DoubleClickUtils;
 import com.example.motor.util.FileUtils;
 import com.example.motor.util.Loadding;
 import com.example.motor.util.MyAlertDialog;
+import com.example.motor.util.MyProvider;
 import com.example.motor.util.SPUtils;
 
 import org.json.JSONObject;
@@ -174,7 +175,7 @@ public class PersonalDataActivity extends AppCompatActivity {
                                                 e.printStackTrace();
                                             }
                                             if (Build.VERSION.SDK_INT >= 24){ // 大于等于android7.0
-                                                imageUri = FileProvider.getUriForFile(
+                                                imageUri = MyProvider.getUriForFile(
                                                         PersonalDataActivity.this,
                                                         "com.example.motor.activity",
                                                         outputImage);
