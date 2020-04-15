@@ -33,6 +33,7 @@ import com.example.motor.activity.MainActivity;
 import com.example.motor.activity.MaintenanceManagementActivity;
 import com.example.motor.activity.MotorMonitoringActivity;
 import com.example.motor.activity.PendingTaskActivity;
+import com.example.motor.activity.ROSDrinkWaterDeviceAnimationActivity;
 import com.example.motor.banner.LocalImageHolderView;
 import com.example.motor.constant.ConstantsField;
 import com.example.motor.db.TaskItemBean;
@@ -241,6 +242,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     toast("请点击左上角按钮，选择相应设备");
                 } else if (!DoubleClickUtils.isFastDoubleClick()) {
                     intent.setClass(getActivity(), GraphActivity.class);
+//                    intent.setClass(getActivity(), ROSDrinkWaterDeviceAnimationActivity.class);
                     startActivity(intent);
                 }
                 break;

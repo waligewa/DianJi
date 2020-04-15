@@ -205,6 +205,10 @@
             android:configChanges="screenSize|orientation|keyboardHidden"
             android:screenOrientation="landscape" />
         <activity
+            android:name="com.example.motor.activity.ROSDrinkWaterDeviceAnimationActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
             android:name="com.example.motor.activity.DataAnalysisActivity"
             android:screenOrientation="landscape"
             android:configChanges="screenSize|orientation|keyboardHidden"

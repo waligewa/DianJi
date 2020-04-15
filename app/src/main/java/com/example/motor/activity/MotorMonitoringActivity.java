@@ -118,9 +118,9 @@ public class MotorMonitoringActivity extends Activity {
     @ViewInject(R.id.power)
     TextView power;
     @ViewInject(R.id.water_supply_status)
-    TextView wStatus;                               // 供水状态
+    TextView wStatus;                                                                               // 供水状态
     @ViewInject(R.id.downtime_reason)
-    TextView dtReason;                              // 停机原因
+    TextView dtReason;                                                                              // 停机原因
 
     @ViewInject(R.id.UpdateTime)
     TextView UpdateTime;
@@ -129,15 +129,15 @@ public class MotorMonitoringActivity extends Activity {
     @ViewInject(R.id.position)
     TextView acPosition;
     @ViewInject(R.id.firstlinearlayout)
-    LinearLayout flt;                               // 变频故障和状态码的隐藏
+    LinearLayout flt;                                                                               // 变频故障和状态码的隐藏
     @ViewInject(R.id.secondlinearlayout)
-    LinearLayout slt;                               // 供水状态和停机原因的隐藏
+    LinearLayout slt;                                                                               // 供水状态和停机原因的隐藏
     private View pop;
     private TextView tvTitle;
 
-    private List<MotorDataBeanFather> dataInfo = new ArrayList<>();                 // 父类集合
-    private List<PositionSaveBean> psList = new ArrayList<>();                      // 保存位置的集合
-    private List<MotorDataBean> diList = new ArrayList<>();                         // 子类集合
+    private List<MotorDataBeanFather> dataInfo = new ArrayList<>();                                 // 父类集合
+    private List<PositionSaveBean> psList = new ArrayList<>();                                      // 保存位置的集合
+    private List<MotorDataBean> diList = new ArrayList<>();                                         // 子类集合
     /**
      * 地图实例
      */
@@ -350,9 +350,9 @@ public class MotorMonitoringActivity extends Activity {
 //      把View添加到什么样的布局中,就使用什么样的LayoutParams布局参数对象
         MapViewLayoutParams layoutParams = new MapViewLayoutParams
                 .Builder()
-                .layoutMode(MapViewLayoutParams.ELayoutMode.mapMode)                           // 设置坐标类型为经纬度
-                .position(position)                                                            // 设置标志的位置
-                .yOffset(-85)                                                                  // 设置View向上移
+                .layoutMode(MapViewLayoutParams.ELayoutMode.mapMode)                                // 设置坐标类型为经纬度
+                .position(position)                                                                 // 设置标志的位置
+                .yOffset(-85)                                                                       // 设置View向上移
                 .build();
         return layoutParams;
     }
@@ -362,7 +362,7 @@ public class MotorMonitoringActivity extends Activity {
         motor_rb_2.setVisibility(View.GONE);
         motor_rb_3.setVisibility(View.GONE);
         motor_rb_4.setVisibility(View.GONE);
-        motor_data_view.setVisibility(View.GONE);                                               // 上面的表格结构LinearLayout
+        motor_data_view.setVisibility(View.GONE);                                                   // 上面的表格结构LinearLayout
 //      下面这个api没用过，是个清除所有选中效果的API
         motor_rg.clearCheck();
         if (t.size() > 0) {
@@ -462,7 +462,7 @@ public class MotorMonitoringActivity extends Activity {
                     if (object.getString("Code").equals("1")) {
                         dataInfo.clear();
                         psList.clear();
-                        mBaiduMap.clear();                                                               // 可以将地图上面的所有marker都清空
+                        mBaiduMap.clear();                                                          // 可以将地图上面的所有marker都清空
 //                      将GPS设备采集的原始GPS坐标转换成百度坐标
                         CoordinateConverter converter = new CoordinateConverter();
                         converter.from(CoordinateConverter.CoordType.GPS);
@@ -597,16 +597,16 @@ public class MotorMonitoringActivity extends Activity {
                             OverlayOptions overlayOptions = null;
                             if(desLatLng == null){
                                 overlayOptions = new MarkerOptions()
-                                        .position(latLng)                                                    // 位置
-                                        .icon(mIconMaker)                                                    // 图标
+                                        .position(latLng)                                           // 位置
+                                        .icon(mIconMaker)                                           // 图标
                                         .draggable(true)
-                                        .zIndex(5);                                                          // 图标可以拖动
+                                        .zIndex(5);                                                 // 图标可以拖动
                             } else {
                                 overlayOptions = new MarkerOptions()
-                                        .position(desLatLng)                                                 // 位置
-                                        .icon(mIconMaker)                                                    // 图标
+                                        .position(desLatLng)                                        // 位置
+                                        .icon(mIconMaker)                                           // 图标
                                         .draggable(true)
-                                        .zIndex(5);                                                          // 图标可以拖动
+                                        .zIndex(5);                                                 // 图标可以拖动
                             }
 //                          mBaiduMap.addOverlay(overlayOptions);
                             Marker marker = (Marker) mBaiduMap.addOverlay(overlayOptions);
@@ -806,7 +806,7 @@ public class MotorMonitoringActivity extends Activity {
                     if (object.getString("Code").equals("1")) {
                         dataInfo.clear();
                         psList.clear();
-                        mBaiduMap.clear();                                                               // 可以将地图上面的所有marker都清空
+                        mBaiduMap.clear();                                                          // 可以将地图上面的所有marker都清空
 //                      将GPS设备采集的原始GPS坐标转换成百度坐标
                         CoordinateConverter converter = new CoordinateConverter();
                         converter.from(CoordinateConverter.CoordType.GPS);
@@ -900,16 +900,16 @@ public class MotorMonitoringActivity extends Activity {
                             OverlayOptions overlayOptions = null;
                             if(desLatLng == null){
                                 overlayOptions = new MarkerOptions()
-                                        .position(latLng)                                                    // 位置
-                                        .icon(mIconMaker)                                                    // 图标
+                                        .position(latLng)                                           // 位置
+                                        .icon(mIconMaker)                                           // 图标
                                         .draggable(true)
-                                        .zIndex(5);                                                          // 图标可以拖动
+                                        .zIndex(5);                                                 // 图标可以拖动
                             } else {
                                 overlayOptions = new MarkerOptions()
-                                        .position(desLatLng)                                                    // 位置
-                                        .icon(mIconMaker)                                                    // 图标
+                                        .position(desLatLng)                                        // 位置
+                                        .icon(mIconMaker)                                           // 图标
                                         .draggable(true)
-                                        .zIndex(5);                                                          // 图标可以拖动
+                                        .zIndex(5);                                                 // 图标可以拖动
                             }
                             Marker marker = (Marker) mBaiduMap.addOverlay(overlayOptions);
                             marker.setExtraInfo(mBundle);
@@ -1070,12 +1070,12 @@ public class MotorMonitoringActivity extends Activity {
                         mBundle.putString("id", s);
 //                      图标   没有加title
                         OverlayOptions overlayOptions = new MarkerOptions()
-                                .position(end)                                                       // 位置
-                                .icon(mIconMaker)                                                    // 图标
+                                .position(end)                                                      // 位置
+                                .icon(mIconMaker)                                                   // 图标
                                 .title(jbt.getString("DeviceName") + "\n" +
-                                        "DTU编号：" + jbt.getString("DeviceID"))                     // title
+                                        "DTU编号：" + jbt.getString("DeviceID"))              // title
                                 .draggable(true)
-                                .zIndex(5);                                                          // 图标可以拖动
+                                .zIndex(5);                                                         // 图标可以拖动
                         mtitleTextView.setText(jbt.getString("DeviceName"));
                         Marker marker = (Marker) mBaiduMap.addOverlay(overlayOptions);
                         marker.setExtraInfo(mBundle);
@@ -1095,37 +1095,37 @@ public class MotorMonitoringActivity extends Activity {
     }
 
     private void setMotorData(MotorDataBean motorData) {
-        NowHz.setText(motorData.getFrequency());                                                //  设备频率
-        APhaseCurrent.setText(motorData.getElectric());                                         //  电机电流
-        OutVoltage.setText(motorData.getVoltage());                                             //  电机电压
-        NowTemperature.setText(motorData.getTemperature());                                     //  电机温度
-        SysErrorCode1.setText(motorData.getError());                                            //  错误码
-        SysRunStatus1.setText(motorData.getState());                                            //  状态码
-        AI1ADCValue.setText(motorData.getAI1_ADC());                                            //
-        AI2ADCValue.setText(motorData.getAI2_ADC());                                            //
-        SoftVersion.setText(motorData.getVesion());                                             //  版本号
-        Counter3.setText(motorData.getTimer());                                                 //  计数器
-        sPressure.setText(motorData.getSetP());                                                 //  设定压力
-        oPressure.setText(motorData.getOutPDec());                                              //  输出压力
-        iPressure.setText(motorData.getInPDec());                                               //  输入压力
+        NowHz.setText(motorData.getFrequency());                                                    //  设备频率
+        APhaseCurrent.setText(motorData.getElectric());                                             //  电机电流
+        OutVoltage.setText(motorData.getVoltage());                                                 //  电机电压
+        NowTemperature.setText(motorData.getTemperature());                                         //  电机温度
+        SysErrorCode1.setText(motorData.getError());                                                //  错误码
+        SysRunStatus1.setText(motorData.getState());                                                //  状态码
+        AI1ADCValue.setText(motorData.getAI1_ADC());                                                //
+        AI2ADCValue.setText(motorData.getAI2_ADC());                                                //
+        SoftVersion.setText(motorData.getVesion());                                                 //  版本号
+        Counter3.setText(motorData.getTimer());                                                     //  计数器
+        sPressure.setText(motorData.getSetP());                                                     //  设定压力
+        oPressure.setText(motorData.getOutPDec());                                                  //  输出压力
+        iPressure.setText(motorData.getInPDec());                                                   //  输入压力
         power.setText(motorData.getScrEquipPower());
         if(!TextUtils.isEmpty(motorData.getScrEquipPower())){
-            if (motorData.getScrEquipPower().equals("3")){
-                power.setText("0.37");                                                          //  设备功率
-            } else if (motorData.getScrEquipPower().equals("5")){
-                power.setText("0.55");                                                          //  设备功率
-            } else if (motorData.getScrEquipPower().equals("7")){
-                power.setText("0.75");                                                          //  设备功率
+            if (motorData.getScrEquipPower().equals("0.3")){
+                power.setText("0.37");                                                              //  设备功率
+            } else if (motorData.getScrEquipPower().equals("0.5")){
+                power.setText("0.55");                                                              //  设备功率
+            } else if (motorData.getScrEquipPower().equals("0.7")){
+                power.setText("0.75");                                                              //  设备功率
             } else {
-                power.setText(motorData.getScrEquipPower());                                    //  设备功率
+                power.setText(motorData.getScrEquipPower());                                        //  设备功率
             }
         }
-        wStatus.setText(motorData.getEquipOperateStatus());                                     //  供水状态
-        dtReason.setText(motorData.getEquipAlarmStatus());                                      //  停机原因
+        wStatus.setText(motorData.getEquipOperateStatus());                                         //  供水状态
+        dtReason.setText(motorData.getEquipAlarmStatus());                                          //  停机原因
 //      通过for循环，匹配transferEid，相同就取出dataInfo的其中一个子项，用于时间赋值
         for(int i = 0; i < dataInfo.size(); i++){
             if(transferEid.equals(dataInfo.get(i).getEquipmentID())){
-                if(!TextUtils.isEmpty(dataInfo.get(i).getUpdateTime())){                        //  更新时间
+                if(!TextUtils.isEmpty(dataInfo.get(i).getUpdateTime())){                            //  更新时间
                     UpdateTime.setText(dataInfo.get(i).getUpdateTime().replace("T", " ").split("\\.")[0]);
                 }
             }
@@ -1138,7 +1138,7 @@ public class MotorMonitoringActivity extends Activity {
         protected Void doInBackground(Void... params) {
             while (running) {
                 try {
-                    publishProgress();                                                         // 类似于给主线程发消息，通知更新UI
+                    publishProgress();                                                              // 类似于给主线程发消息，通知更新UI
                     Thread.sleep(TIME);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -1153,7 +1153,7 @@ public class MotorMonitoringActivity extends Activity {
                 toast("网络连接错误，请检查网络...");
             } else {
 //              三十秒刷新一次数据
-                getDataFiveSecond();                                                           // 为主线程 更新UI
+                getDataFiveSecond();                                                                // 为主线程 更新UI
             }
             super.onProgressUpdate(values);
         }
@@ -1183,8 +1183,8 @@ public class MotorMonitoringActivity extends Activity {
         mLocationClient.registerLocationListener(mMyLocationListener);
 //      设置定位的相关配置
         LocationClientOption option = new LocationClientOption();
-        option.setOpenGps(true);                                        // 打开gps
-        option.setCoorType("bd09ll");                                   // 设置坐标类型
+        option.setOpenGps(true);                                                                    // 打开gps
+        option.setCoorType("bd09ll");                                                               // 设置坐标类型
         option.setScanSpan(10000);
         mLocationClient.setLocOption(option);
     }
@@ -1285,7 +1285,7 @@ public class MotorMonitoringActivity extends Activity {
                     JSONObject object = new JSONObject(arg0);
                     if (object.getString("Code").equals("1")) {
                         dataInfo.clear();
-                        mBaiduMap.clear();                                                               // 可以将地图上面的所有marker都清空
+                        mBaiduMap.clear();                                                          // 可以将地图上面的所有marker都清空
                         JSONArray array = new JSONArray(object.getString("Data"));
                         for(int i = 0; i < array.length(); i++){
                             JSONObject jo = array.getJSONObject(i);
