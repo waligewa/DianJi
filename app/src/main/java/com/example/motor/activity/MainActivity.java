@@ -16,8 +16,9 @@ import android.nfc.tech.NfcA;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;

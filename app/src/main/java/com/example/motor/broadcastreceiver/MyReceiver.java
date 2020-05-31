@@ -62,8 +62,8 @@ public class MyReceiver extends BroadcastReceiver {
                     i.setClass(context, ChronicleActivity3.class);
                 }
                 //i.putExtras(bundle);
-                i.putExtra("workorder_number", content);  // 内容指的那一堆报警内容
-				i.putExtra("workorder_type", type);  // type指的是那个json字符串
+                i.putExtra("workorder_number", content);                                      // 内容指的那一堆报警内容
+				i.putExtra("workorder_type", type);                                           // type指的是那个json字符串
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 context.startActivity(i);
 				// 打开自定义的Activity

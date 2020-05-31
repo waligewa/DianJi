@@ -9,6 +9,8 @@ import android.graphics.Typeface;
 import android.os.Environment;
 import android.os.Vibrator;
 
+import androidx.multidex.MultiDex;
+
 import com.example.motor.db.InspectionOffineItem;
 import com.example.motor.db.InspectionOffineStateItem;
 import com.example.motor.service.LocationServer;
@@ -72,6 +74,7 @@ public class MyApplication extends Application {
             public void receivedCrash(Thread thread, Throwable throwable) { }
         });
         PgyerActivityManager.set(this);
+        MultiDex.install(this);
     }
 
     //  蒲公英

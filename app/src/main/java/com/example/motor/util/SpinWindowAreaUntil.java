@@ -52,7 +52,7 @@ public class SpinWindowAreaUntil {
         sharedPreferences = activity.getSharedPreferences("device", Context.MODE_PRIVATE);
         mAdapter = new CustemSpinerAdapter(activity);
 //      根据设备编号获取设备数据
-        getData(activity);
+        LoadRtuData(activity);
         mAdapter.refreshData(mfistCustemInfors, 0);
         mSpinerPopWindow = new SpinerPopWindow(activity);
         mSpinerPopWindow.setAdatper(mAdapter);
@@ -111,7 +111,7 @@ public class SpinWindowAreaUntil {
     }
 
 //  根据设备编号获取设备数据
-    private static void getData(final Activity activity) {
+    private static void LoadRtuData(final Activity activity) {
         pageIndex = 1;
         pageSize = 20;
         haveNext = true;
