@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-DianJi.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-DianJi.iml" group="DianJi" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DianJi.iml" filepath="$PROJECT_DIR$/.idea/modules/DianJi.iml" group="DianJi" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DianJi.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DianJi.app.iml" group="DianJi/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libzxing/DianJi.libzxing.iml" filepath="$PROJECT_DIR$/.idea/modules/libzxing/DianJi.libzxing.iml" group="DianJi/libzxing" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/maputilslibrary/DianJi.maputilslibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/maputilslibrary/DianJi.maputilslibrary.iml" group="DianJi/maputilslibrary" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DianJi/app" />
+      <module fileurl="file://$PROJECT_DIR$/libzxing/libzxing.iml" filepath="$PROJECT_DIR$/libzxing/libzxing.iml" group="DianJi/libzxing" />
+      <module fileurl="file://$PROJECT_DIR$/maputilslibrary/maputilslibrary.iml" filepath="$PROJECT_DIR$/maputilslibrary/maputilslibrary.iml" group="DianJi/maputilslibrary" />
     </modules>
   </component>
 </project>
